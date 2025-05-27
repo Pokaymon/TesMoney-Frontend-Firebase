@@ -1,0 +1,87 @@
+.PocketContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 1200px;
+    border-radius: 10px;
+}
+.PocketContent_textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.PocketContent_textContainer .pockets {
+    color: #E96E48;
+}
+.highlight {
+    color: gray;
+}
+.textContainer {
+    display: flex;
+}
+.textContainer h2 {
+    color: green;
+    padding: 20px;
+}
+.buttonContainer {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+.button_ingreso,
+.button_gasto,
+.button_historial {
+    all: unset;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.8s ease;
+}
+.button_ingreso {
+    background-color: rgb(23, 143, 23);
+}
+.button_gasto {
+    background-color: rgb(245, 52, 52);
+}
+.button_historial {
+    background-color: rgb(62, 136, 248);
+}
+.buttonContainer button:hover {
+    filter: brightness(80%);
+}
+.history_list {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+.history_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+}
+.history_item.income {
+    color: green;
+}
+
+.history_item.expense {
+    color: red;
+}
+.history_amount {
+    font-weight: bold;
+    min-width: 100px;
+    text-align: left;
+}
+.history_description {
+    text-align: right;
+    flex: 1;
+    margin-left: 12px;
+    word-break: break-word;
+}

@@ -1,0 +1,227 @@
+@keyframes levitate {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+.PocketsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 1200px;
+    border-radius: 10px;
+}
+.Pocket_Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    width: 400px;
+    gap: 60px;
+}
+.figure_edit {
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    color: #333;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.figure_edit:hover {
+    color: #666;
+    animation: levitate 1s ease-in-out infinite;
+}
+.Pocket_Container:hover .figure_edit {
+    visibility: visible;
+    opacity: 1;
+}
+.Pocket_textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.Pocket_button_container{
+    display: flex;
+    gap: 10px;
+}
+.Pocket_button_container button {
+    all: unset;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #9b111e;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.Pocket_button_container button:last-child {
+    background-color: #E96E48;
+}
+.Pocket_button_container button:hover {
+    background-color: #b22234;
+    animation: levitate 1s ease-in-out infinite;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.Pocket_button_container button:hover:last-child {
+    background-color: #f07c58;
+}
+.Pocket_textContainer .tes {
+    color: #E96E48;
+}
+.Pocket_textContainer .tesmoney {
+    color: black;
+}
+.Pocket_textContainer .pockets {
+    color: #E96E48;
+}
+.Pocket_Container h1 {
+    cursor: pointer;
+}
+.Pocket_Container:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+.modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal_content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+.form_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.modal_content h2 {
+    margin: 0;
+}
+.modal_content label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 5px;
+}
+.modal_content input,
+.modal_content textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.modal_buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.modal_buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.modal_buttons .delete_btn {
+    background-color: #e74c3c;
+    color: white;
+}
+.close_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ccc;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.Pocket_Notes_Container {
+    display: flex;
+    gap: 40px;
+}
+
+/* ToolTip */
+
+.Notes_Container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  .Note_Item {
+    position: relative;
+    background-color: #f6f6f6;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+  
+  .Note_Item:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .Note_Tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: 220px;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    font-size: 14px;
+  }
+  
+  .Note_Item:hover .Note_Tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Note_Title_Container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .delete-icon {
+    color: red;
+    opacity: 0;
+    transition: opacity 0.2s;
+    margin-left: 10px;
+  }
