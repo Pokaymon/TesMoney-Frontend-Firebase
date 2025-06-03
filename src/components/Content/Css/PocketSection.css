@@ -39,8 +39,17 @@
     visibility: visible;
     opacity: 1;
 }
+.Pocket_Notes_Container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+}
 .Pocket_textContainer {
     display: flex;
+    flex: 1;
+    gap: 10px;
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
@@ -53,24 +62,43 @@
     all: unset;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #9b111e;
     color: white;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     display: inline-block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
 }
-.Pocket_button_container button:last-child {
+
+/* Botón 1: rojo rubí oscuro */
+.Pocket_button_container button:nth-child(1) {
+    background-color: #9b111e;
+}
+.Pocket_button_container button:nth-child(1):hover {
+    background-color: #b22234;
+}
+
+/* Botón 2: rubí medio */
+.Pocket_button_container button:nth-child(2) {
+    background-color: #C72C48;
+}
+.Pocket_button_container button:nth-child(2):hover {
+    background-color: #d4445d;
+}
+
+/* Botón 3: naranja salmón */
+.Pocket_button_container button:nth-child(3) {
     background-color: #E96E48;
 }
+.Pocket_button_container button:nth-child(3):hover {
+    background-color: #f07c58;
+}
+
+/* Efecto levitación en todos */
 .Pocket_button_container button:hover {
-    background-color: #b22234;
     animation: levitate 1s ease-in-out infinite;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-.Pocket_button_container button:hover:last-child {
-    background-color: #f07c58;
 }
 .Pocket_textContainer .tes {
     color: #E96E48;
@@ -165,11 +193,22 @@
 
 .Notes_Container {
     display: flex;
+    flex: 1;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     margin-top: 20px;
   }
   
+.Poacke_real_container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
   .Note_Item {
     position: relative;
     background-color: #f6f6f6;

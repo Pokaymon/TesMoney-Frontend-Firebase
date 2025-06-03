@@ -21,5 +21,5 @@ export const useNotes = () => {
     fetchNotes();
   }, []);
 
-  return { notes };
+  return { notes, setNotes, fetchNotes };
 };
